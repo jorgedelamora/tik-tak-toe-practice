@@ -1,0 +1,59 @@
+.container {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    width: 15rem;
+    height: 15rem;
+    display: grid;
+    grid-template-columns: (5rem 5rem 5rem);
+    grid-template-rows: (5rem 5rem 5rem);
+    margin: 1rem;
+    @media screen and (min-width: 400px){
+        width: 24rem;
+        height: 24rem;
+        grid-template-columns: (8rem 8rem 8rem);
+    grid-template-rows: (8rem 8rem 8rem);
+    }
+}
+
+.space-number-0 {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.space-number-1 {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.space-number-2 {
+    border-bottom: 2px solid black;
+}
+.space-number-3 {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.space-number-4 {
+    border: 2px solid black;
+}
+.space-number-5 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.space-number-6 {
+    border-right: 2px solid black;
+}
+.space-number-7 {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.restartBtn{
+    width: 12rem;
+}

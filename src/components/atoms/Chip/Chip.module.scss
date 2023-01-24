@@ -1,0 +1,14 @@
+.container {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid red;
+    box-shadow: 2px ;
+    border-radius: 100%;
+    cursor: not-allowed;
+    box-shadow: -3px 3px 5px 1px rgba(0,0,0,0.67);
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
