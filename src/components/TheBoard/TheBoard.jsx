@@ -21,13 +21,12 @@ const TheBoard = () => {
 
     const [state, updateState] = useReducer((prev, next) => {
         const newState = {...prev, ...next};
-
         const winner = checkForWinner(newState.boardSpaces);
-
         if(winner){
             newState.isGameOver = true, newState.winner = winner;
             return newState;
         }
+
         if(newState.turns === 0) {
             newState.isGameOver = true;
         }
@@ -38,7 +37,7 @@ const TheBoard = () => {
     },GAME_START_STATE
     )
   
-    const handleOnClickSpace = (spaceIdx) => {
+    const handleOnClick = (spaceIdx) => {
         const currentChipStatus = state.isXTurn ? chipStatus.X : chipStatus.O;
         const newBoardSpaces = state.boardSpaces.map((space, idx) => {
             if(idx === spaceIdx){
@@ -51,7 +50,7 @@ const TheBoard = () => {
 
     const restartGame = () => {
         updateState(GAME_START_STATE);
-    }
+    }   
 
   return (
     <div className={styles.container}>
@@ -69,7 +68,7 @@ const TheBoard = () => {
             status={space}
             isGameOver={state.isGameOver}
             customClass={styles['space-number-' + idx]}
-            onClick={handleOnClickSpace} 
+            onClick={handleOnClick} 
         />)
         )}
         </div>
